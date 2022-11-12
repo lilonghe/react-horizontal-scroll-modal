@@ -1,0 +1,84 @@
+.horizontalScrollModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+}
+
+.horizontalScrollModal div {
+    box-sizing: border-box;
+}
+
+.horizontalScrollContainer {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: none;
+    pointer-events: auto;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.horizontalScrollPanel {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform var(--toggle-animation-time);
+}
+
+.horizontalScrollPanel.visible {
+    visibility: visible;
+    transform: none;
+}
+
+.horizontalScroll {
+    height: var(--scroll-height);
+}
+
+.horizontalContent {
+    display: flex;
+    width: max-content;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.deepDive {
+    position: absolute;
+    height: 20px;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.deepDiveProgress {
+    background-color: #CCC;
+    width: 200px;
+    height: 2px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.deepDiveProgressIndicator {
+    background-color: #000;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s;
+}
+
+.closeBtn img{
+    background: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+}
